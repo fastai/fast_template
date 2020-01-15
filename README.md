@@ -1,3 +1,4 @@
-# jph00.github.io
+# Your blog
 
-Jeremy's blog
+This is the repository for your blog!
+
