@@ -14,6 +14,9 @@ github_username: jph00
 email: 
 twitter_username: 
 
+# Set this to true to get LaTeX math equation support
+use_math: 
+
 # Everything below here can be ignored, unless you want to change the theme entirely
 theme: minima
 plugins:
