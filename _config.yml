@@ -14,6 +14,12 @@ github_username: jph00
 email: 
 twitter_username: 
 
+# Change "classic" to "solarized" or "solarized-dark" for alternative color schemes
+minima:
+  skin: classic
+
+# Everything below here can be ignored, unless you want to change the theme entirely
+
 theme: minima
 plugins:
   - jekyll-feed
