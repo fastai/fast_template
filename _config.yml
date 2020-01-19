@@ -21,6 +21,7 @@ use_math:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-gist
   - jekyll-octicons
 
 titles_from_headings:
