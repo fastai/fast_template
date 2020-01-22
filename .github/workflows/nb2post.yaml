@@ -22,7 +22,8 @@ jobs:
       run: |
         chmod -R 777 _posts/
         pip install --upgrade pip
-        pip install git+https://github.com/fastai/nbdev.git
+        git clone https://github.com/fastai/nbdev.git
+        pip install -e nbdev
         nbdev_install_git_hooks
         python _action_files/nb2post.py
     
