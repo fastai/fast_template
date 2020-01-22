@@ -23,6 +23,7 @@ jobs:
         chmod -R 777 _posts/
         pip install --upgrade pip
         pip install nbdev
+        nbdev_install_git_hooks
         python _action_files/nb2post.py
     
     - name: Look at files
