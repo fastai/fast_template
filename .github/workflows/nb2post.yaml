@@ -14,15 +14,15 @@ jobs:
       uses: actions/checkout@master
 
     - uses: actions/setup-python@v1
-        with:
-          python-version: '3.6'
-          architecture: 'x64'
+      with:
+        python-version: '3.6'
+        architecture: 'x64'
     
     - name: Run notebook converter
-        run: |
-          chmod -R 777 _posts/
-          pip install nbdev
-          python _action_files/nb2post.py
+      run: |
+        chmod -R 777 _posts/
+        pip install nbdev
+        python _action_files/nb2post.py
       
     - name: commit & push files
       run: |
