@@ -84,14 +84,14 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-d431c796a1054c529110c16b81da9b79"></div>
+<div id="altair-viz-1"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
-    const outputDiv = document.getElementById("altair-viz-d431c796a1054c529110c16b81da9b79");
+    const outputDiv = document.getElementById("altair-viz-1");
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
@@ -128,7 +128,7 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://vega.github.io/vega-datasets/data/movies.json"}, "mark": "circle", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "Select"}, "value": 0.05}, "tooltip": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "selection": {"Select": {"type": "single", "fields": ["Major_Genre", "MPAA_Rating"], "init": {"Major_Genre": "Drama", "MPAA_Rating": "R"}, "bind": {"Major_Genre": {"input": "select", "options": ["Action", "Adventure", "Black Comedy", "Comedy", "Concert/Performance", "Documentary", "Drama", "Horror", "Musical", "Romantic Comedy", "Thriller/Suspense", "Western"]}, "MPAA_Rating": {"input": "radio", "options": ["G", "PG", "PG-13", "R", "NC-17", "Not Rated"]}}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://vega.github.io/vega-datasets/data/movies.json"}, "mark": "circle", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "Select"}, "value": 0.05}, "tooltip": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "selection": {"Select": {"type": "single", "fields": ["Major_Genre", "MPAA_Rating"], "init": {"Major_Genre": "Drama", "MPAA_Rating": "R"}, "bind": {"Major_Genre": {"input": "select", "options": ["Action", "Adventure", "Black Comedy", "Comedy", "Concert/Performance", "Documentary", "Drama", "Horror", "Musical", "Romantic Comedy", "Thriller/Suspense", "Western"]}, "MPAA_Rating": {"input": "radio", "options": ["G", "PG", "PG-13", "R", "NC-17", "Not Rated"]}}}}, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json"}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -194,14 +194,14 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-1a01dd7c092b4faab58f1990176eff0f"></div>
+<div id="altair-viz-2"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
-    const outputDiv = document.getElementById("altair-viz-1a01dd7c092b4faab58f1990176eff0f");
+    const outputDiv = document.getElementById("altair-viz-2");
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
@@ -238,7 +238,7 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "vconcat": [{"mark": "bar", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "selector001"}, "value": 0.05}, "x": {"type": "temporal", "field": "Release_Date", "timeUnit": "year", "title": "Films by Release Year"}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "height": 50, "selection": {"selector001": {"type": "multi", "on": "mouseover", "encodings": ["x"]}}, "width": 650}, {"mark": "circle", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "selector001"}, "value": 0.05}, "tooltip": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "height": 400, "width": 650}], "data": {"url": "https://vega.github.io/vega-datasets/data/movies.json"}, "spacing": 5, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "vconcat": [{"mark": "bar", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "selector001"}, "value": 0.05}, "x": {"type": "temporal", "field": "Release_Date", "timeUnit": "year", "title": "Films by Release Year"}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "height": 50, "selection": {"selector001": {"type": "multi", "on": "mouseover", "encodings": ["x"]}}, "width": 650}, {"mark": "circle", "encoding": {"opacity": {"condition": {"value": 0.75, "selection": "selector001"}, "value": 0.05}, "tooltip": {"type": "nominal", "field": "Title"}, "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "field": "IMDB_Rating"}}, "height": 400, "width": 650}], "data": {"url": "https://vega.github.io/vega-datasets/data/movies.json"}, "spacing": 5, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json"}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -290,14 +290,14 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-722bfd46694e47ef8bde7aedadeb361b"></div>
+<div id="altair-viz-3"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
-    const outputDiv = document.getElementById("altair-viz-722bfd46694e47ef8bde7aedadeb361b");
+    const outputDiv = document.getElementById("altair-viz-3");
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
@@ -334,7 +334,7 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://vega.github.io/vega-datasets/data/movies.json"}, "mark": "circle", "encoding": {"tooltip": [{"type": "nominal", "field": "Title"}, {"type": "nominal", "field": "Release_Date"}, {"type": "quantitative", "field": "IMDB_Rating"}, {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}], "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "axis": {"minExtent": 30}, "field": "IMDB_Rating"}}, "height": 400, "selection": {"selector002": {"type": "interval", "bind": "scales", "encodings": ["x"]}}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"url": "https://vega.github.io/vega-datasets/data/movies.json"}, "mark": "circle", "encoding": {"tooltip": [{"type": "nominal", "field": "Title"}, {"type": "nominal", "field": "Release_Date"}, {"type": "quantitative", "field": "IMDB_Rating"}, {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}], "x": {"type": "quantitative", "field": "Rotten_Tomatoes_Rating"}, "y": {"type": "quantitative", "axis": {"minExtent": 30}, "field": "IMDB_Rating"}}, "height": 400, "selection": {"selector002": {"type": "interval", "bind": "scales", "encodings": ["x"]}}, "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json"}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -419,14 +419,14 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-d6eb8f8e33e04f8e8e378172d14ac994"></div>
+<div id="altair-viz-4"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
-    const outputDiv = document.getElementById("altair-viz-d6eb8f8e33e04f8e8e378172d14ac994");
+    const outputDiv = document.getElementById("altair-viz-4");
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
@@ -463,7 +463,7 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "line", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}}, {"mark": {"type": "rule", "color": "#aaa"}, "encoding": {"x": {"type": "temporal", "field": "date"}}, "transform": [{"filter": {"selection": "selector003"}}]}, {"mark": "circle", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "opacity": {"condition": {"value": 1, "selection": "selector003"}, "value": 0}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "selection": {"selector003": {"type": "single", "encodings": ["x"], "on": "mouseover", "nearest": true, "empty": "none"}}}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "stroke": "white", "strokeWidth": 5}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector003"}}]}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector003"}}]}], "data": {"url": "https://vega.github.io/vega-datasets/data/stocks.csv"}, "height": 400, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "layer": [{"mark": "line", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}}, {"mark": {"type": "rule", "color": "#aaa"}, "encoding": {"x": {"type": "temporal", "field": "date"}}, "transform": [{"filter": {"selection": "selector003"}}]}, {"mark": "circle", "encoding": {"color": {"type": "nominal", "field": "symbol"}, "opacity": {"condition": {"value": 1, "selection": "selector003"}, "value": 0}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "selection": {"selector003": {"type": "single", "encodings": ["x"], "on": "mouseover", "nearest": true, "empty": "none"}}}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "stroke": "white", "strokeWidth": 5}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector003"}}]}, {"mark": {"type": "text", "align": "left", "dx": 5, "dy": -5}, "encoding": {"color": {"type": "nominal", "field": "symbol"}, "text": {"type": "quantitative", "field": "price"}, "x": {"type": "temporal", "field": "date"}, "y": {"type": "quantitative", "field": "price", "scale": {"type": "log"}}}, "transform": [{"filter": {"selection": "selector003"}}]}], "data": {"url": "https://vega.github.io/vega-datasets/data/stocks.csv"}, "height": 400, "width": 700, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json"}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -523,14 +523,14 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-0dc5497fae944d09a5b270e4513617e5"></div>
+<div id="altair-viz-5"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
-    const outputDiv = document.getElementById("altair-viz-0dc5497fae944d09a5b270e4513617e5");
+    const outputDiv = document.getElementById("altair-viz-5");
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
@@ -567,7 +567,7 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "repeat": {"column": ["Acceleration", "Horsepower", "Miles_per_Gallon"], "row": ["Miles_per_Gallon", "Horsepower", "Acceleration"]}, "spec": {"data": {"url": "https://vega.github.io/vega-datasets/data/cars.json"}, "mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector004"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector004"}, "value": 0.1}, "x": {"type": "quantitative", "field": {"repeat": "column"}}, "y": {"type": "quantitative", "field": {"repeat": "row"}}}, "height": 140, "selection": {"selector004": {"type": "interval", "resolve": "global"}}, "width": 140}, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "repeat": {"column": ["Acceleration", "Horsepower", "Miles_per_Gallon"], "row": ["Miles_per_Gallon", "Horsepower", "Acceleration"]}, "spec": {"data": {"url": "https://vega.github.io/vega-datasets/data/cars.json"}, "mark": "circle", "encoding": {"color": {"condition": {"type": "ordinal", "field": "Cylinders", "selection": "selector004"}, "value": "grey"}, "opacity": {"condition": {"value": 0.8, "selection": "selector004"}, "value": 0.1}, "x": {"type": "quantitative", "field": {"repeat": "column"}}, "y": {"type": "quantitative", "field": {"repeat": "row"}}}, "height": 140, "selection": {"selector004": {"type": "interval", "resolve": "global"}}, "width": 140}, "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json"}, {"mode": "vega-lite"});
 </script>
 </div>
 
@@ -631,14 +631,14 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 
-<div id="altair-viz-0191951ac9394eb0846601ce4f5c35e1"></div>
+<div id="altair-viz-6"></div>
 <script type="text/javascript">
   (function(spec, embedOpt){
-    const outputDiv = document.getElementById("altair-viz-0191951ac9394eb0846601ce4f5c35e1");
+    const outputDiv = document.getElementById("altair-viz-6");
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.2?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.0.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
@@ -675,83 +675,12 @@ summary: "An example of how to create blog posts with Jupyter and Fast Template"
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "stroke": "transparent"}}, "repeat": {"row": ["delay", "distance", "time"]}, "spec": {"layer": [{"mark": "bar", "encoding": {"color": {"value": "lightgrey"}, "x": {"type": "quantitative", "axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "selection": {"selector005": {"type": "interval", "encodings": ["x"], "resolve": "intersect"}}}, {"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "transform": [{"filter": {"selection": "selector005"}}]}], "height": 100, "width": 900}, "data": {"url": "https://vega.github.io/vega-datasets/data/flights-5k.json"}, "transform": [{"calculate": "datum.delay < 180 ? datum.delay : 180", "as": "delay"}, {"calculate": "hours(datum.date) + minutes(datum.date) / 60", "as": "time"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json"}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300, "stroke": "transparent"}}, "repeat": {"row": ["delay", "distance", "time"]}, "spec": {"layer": [{"mark": "bar", "encoding": {"color": {"value": "lightgrey"}, "x": {"type": "quantitative", "axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "selection": {"selector005": {"type": "interval", "encodings": ["x"], "resolve": "intersect"}}}, {"mark": "bar", "encoding": {"x": {"type": "quantitative", "axis": {"format": "d", "titleAnchor": "start"}, "bin": {"maxbins": 100, "minstep": 1}, "field": {"repeat": "row"}}, "y": {"type": "quantitative", "aggregate": "count", "title": null}}, "transform": [{"filter": {"selection": "selector005"}}]}], "height": 100, "width": 900}, "data": {"url": "https://vega.github.io/vega-datasets/data/flights-5k.json"}, "transform": [{"calculate": "datum.delay < 180 ? datum.delay : 180", "as": "delay"}, {"calculate": "hours(datum.date) + minutes(datum.date) / 60", "as": "time"}], "$schema": "https://vega.github.io/schema/vega-lite/v4.0.0.json"}, {"mode": "vega-lite"});
 </script>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Ipywidgets">Ipywidgets<a class="anchor-link" href="#Ipywidgets">&#182;</a></h1><h3 id="Note:--I'm-still-trying-to-make-this-section-work.">Note:  I'm still trying to make this section work.<a class="anchor-link" href="#Note:--I'm-still-trying-to-make-this-section-work.">&#182;</a></h3><p>I can get the widgets to render but not sure what I'm doing wrong with regards to connecting to the charts etc.</p>
-<h4 id="slider">slider<a class="anchor-link" href="#slider">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="button">button<a class="anchor-link" href="#button">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">o</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hi&#39;</span><span class="p">)</span>
-<span class="n">w</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Click me&#39;</span><span class="p">)</span>
-<span class="n">w</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-<span class="n">w</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="charts">charts<a class="anchor-link" href="#charts">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">m</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-<span class="n">interactive_plot</span> <span class="o">=</span> <span class="n">interactive</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">))</span>
-<span class="n">output</span> <span class="o">=</span> <span class="n">interactive_plot</span><span class="o">.</span><span class="n">children</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">output</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="s1">&#39;350px&#39;</span>
-<span class="n">interactive_plot</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
