@@ -18,11 +18,14 @@ jobs:
         python-version: '3.6'
         architecture: 'x64'
     
+      # These are the minimal steps I could come up with install nbdev in the actions runner
+      # perhaps this can be simplified?  (I just kept doing what it asked for)
     - name: Run notebook converter
       run: |
         chmod -R 777 _posts/
         pip install --upgrade pip
-        pip install Pillow jupyter_client
+        pip install Pillow jupyter_client ipykernel
+        ipykernel install --user
         git clone https://github.com/fastai/nbdev.git
         pip install -e nbdev
         cp nbdev/settings.ini .
