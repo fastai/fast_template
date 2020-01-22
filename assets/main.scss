@@ -28,7 +28,7 @@
 .language-python + .language-plaintext code { background-color: white !important; }
 .language-python + .language-plaintext pre  { background-color: white !important; }
 
-// for Jupyter Notebook Code Cells from https://www.fast.ai/public/css/hyde.css
+// for Jupyter Notebook HTML Code Cells from https://www.fast.ai/public/css/hyde.css
 
 .input_area pre, .input_area div {
         margin-bottom:0.1rem !important;
@@ -60,12 +60,3 @@
 
 .codecell table { width: auto; }
 
-// To fix sizing issues on Jupyter HTML
-
-.notebook-container {
-        max-width: calc(800px - (30px * 2)) !important;
-        margin-right: auto !important;
-        margin-left: auto !important;
-        padding-right: 30px !important;
-        padding-left: 30px !important;
-}
