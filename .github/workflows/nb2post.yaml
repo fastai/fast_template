@@ -1,0 +1,36 @@
+name: Notebook to Blog Post
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '_notebooks/*.ipynb'
+
+jobs:
+  convert-notebook:
+    runs-on: ubuntu-latest
+    steps:
+    
+      - name: Copy Repository Contents
+        uses: actions/checkout@master
+
+      - name: Grant access to destination directory
+        run: chmod -R 777 _posts/
+
+      - name: Install fastai/nbdev
+      - uses: actions/setup-python@v1
+        with:
+          python-version: '3.6'
+          architecture: 'x64'
+        run: |
+            pip install nbdev
+            python _action_files/nb2post.py
+      
+      - name: commit & push files
+        run: |
+          git config --global user.name $GITHUB_ACTOR
+          git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+          git pull github ${GITHUB_REF} --ff-only
+          git add _posts
+          git commit -m "Update Jupyter Blog Posts"
+          git push github HEAD:${GITHUB_REF}
