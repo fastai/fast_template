@@ -22,11 +22,9 @@ jobs:
       run: |
         chmod -R 777 _posts/
         pip install --upgrade pip
-        pip install Pillow
         git clone https://github.com/fastai/nbdev.git
         pip install -e nbdev
         cp nbdev/settings.ini .
-        nbdev_install_git_hooks
         python _action_files/nb2post.py
     
     - name: Look at files
