@@ -25,7 +25,7 @@ jobs:
         chmod -R 777 _posts/
         pip install --upgrade pip
         pip install Pillow jupyter_client ipykernel
-        ipykernel install --user
+        python3 -m ipykernel install --user
         git clone https://github.com/fastai/nbdev.git
         pip install -e nbdev
         cp nbdev/settings.ini .
