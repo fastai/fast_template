@@ -21,8 +21,13 @@ jobs:
     - name: Run notebook converter
       run: |
         chmod -R 777 _posts/
+        pip install --upgrade pip
         pip install nbdev
         python _action_files/nb2post.py
+    
+    - name: Look at files
+      run: |
+        ls _posts/
       
     - name: commit & push files
       run: |
@@ -30,5 +35,5 @@ jobs:
         git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         git pull github ${GITHUB_REF} --ff-only
         git add _posts
-        git commit -m "Update Jupyter Blog Posts"
+        git commit -m "Update Jupyter Blog Posts" --allow-empty
         git push github HEAD:${GITHUB_REF}
