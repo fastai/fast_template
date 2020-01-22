@@ -59,3 +59,13 @@
 }
 
 .codecell table { width: auto; }
+
+// To fix sizing issues on Jupyter HTML
+
+.notebook-container {
+        max-width: calc(800px - (30px * 2)) !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-right: 30px !important;
+        padding-left: 30px !important;
+}
