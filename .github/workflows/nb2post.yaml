@@ -22,6 +22,7 @@ jobs:
       run: |
         chmod -R 777 _posts/
         pip install --upgrade pip
+        sudo apt-get update
         sudo apt-get install python-imaging
         git clone https://github.com/fastai/nbdev.git
         pip install -e nbdev
