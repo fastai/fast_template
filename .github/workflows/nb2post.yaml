@@ -30,10 +30,6 @@ jobs:
         pip install -e nbdev
         cp nbdev/settings.ini .
         python _action_files/nb2post.py
-    
-    - name: Look at files
-      run: |
-        ls _posts/
       
     - name: commit & push files
       run: |
