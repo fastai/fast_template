@@ -22,7 +22,7 @@ jobs:
       run: |
         chmod -R 777 _posts/
         pip install --upgrade pip
-        pip install Pillow
+        pip install Pillow jupyter_client
         git clone https://github.com/fastai/nbdev.git
         pip install -e nbdev
         cp nbdev/settings.ini .
