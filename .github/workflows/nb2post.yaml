@@ -8,6 +8,7 @@ on:
 
 jobs:
   convert-notebook:
+    if: contains(join(github.event.commits.*.message), '/sync')
     runs-on: ubuntu-latest
     steps:
     - name: Copy Repository Contents
