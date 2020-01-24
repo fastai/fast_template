@@ -1,12 +1,12 @@
 # Automatically Convert Jupyter Notebooks To Blog Posts
 
-`fast_template` will **automatically convert [Jupyter](https://jupyter.org/) Notebooks saved into this directory as blog posts!**.  In addition to automatic conversion, there are some additional benefits that `rast_template` provides:
+[`fast_template`](https://www.fast.ai/2020/01/16/fast_template/) will **automatically convert [Jupyter](https://jupyter.org/) Notebooks saved into this directory as blog posts!**.  In addition to automatic conversion, there are some additional benefits that `fast_template` provides:
 
 - Preserves the interactivity of charts and graphs from visualization libraries like [Altair](https://altair-viz.github.io/).  
 - Allows you to use features of [nbdev](https://nbdev.fast.ai/) to customize blog posts, such as:
     - Hiding cells by placing the comment `#hide` at the top of any cell.  (To hide only the input to a cell use the hide input [jupyter extension](https://github.com/ipython-contrib/jupyter_contrib_nbextensions))
 
-    - Add jekyll warnings, important or note banners with appropriate block quotes by calling [add_jekyll_notes](https://nbdev.fast.ai/export2html/#add_jekyll_notes).
+    - Add jekyll warnings, important or note banners with appropriate block quotes by using special markdown syntax [defined here](https://nbdev.fast.ai/export2html/#add_jekyll_notes).
 
     - Displaying formatted documentation for classes, functions, and enums by calling [show_doc](https://nbdev.fast.ai/showdoc/#show_doc).
 
@@ -38,6 +38,12 @@ Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), whic
 
 
 3. Save your notebook with the naming convention `YYYY-MM-DD-*.ipynb` into the `/_notebooks` folder of this repo.  For example `_/notebooks/2020-01-28-My-First-Post.ipynb`.  This [naming convention is required by Jekyll](https://jekyllrb.com/docs/posts/) to render your blog post.
+    - Be careful to name your file correctly!  It is easy to forget the last dash in `YYYY-MM-DD-`, furthermore, the character immediately following the dash should only be an alphabetical letter.  Examples of valid filenames are:
+
+        ```
+        2020-01-28-My-First-Post.ipynb
+        2012-09-12-how-to-write-a-blog.ipynb
+        ```
     - If you fail to name your file correctly, `fast_template` will automatically attempt to fix the problem by prepending the last modified date of your notebook to your generated blog post in `_posts`, however, it is recommended that you name your files properly yourself for more transperency.
 
 4. [Commit and push](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line) your notebook to GitHub.  **Important: At least one of your commit messages prior to pushing your notebook(s) must contain the word `/sync` in order to trigger automatic notebook conversion.**  Furthermore, automatic conversion only occurs when a **push is made to the master branch**.  
@@ -48,6 +54,32 @@ Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), whic
 
 The Jupyter to blog post conversion process is powered by [nbdev](https://github.com/fastai/nbdev), which has [utilities to convert notebooks to webpages](https://nbdev.fast.ai/export2html/), including integrations with [GitHub Pages](https://pages.github.com/), such as [jekyll notes](https://nbdev.fast.ai/export2html/#add_jekyll_notes).  
 
-A [GitHub Action](https://github.com/features/actions) calls `nbdev` when changes to files are detected in the `/_notebooks` directory of your repo and converts Jupyter notebook files into blog posts.  These blog posts are placed into the `/_posts` directory (via a commit and push) which used by GitHub Pages to render your blog posts.  This GitHub Action an be customized by modifying the [/.github/workflows/nb2post.yaml](/.github/workflows/nb2post.yaml) in your repo.
+A [GitHub Action](https://github.com/features/actions) calls `nbdev` when changes to files are detected in the `/_notebooks` directory of your repo and converts Jupyter notebook files into blog posts.  These blog posts are placed into the `/_posts` directory (via a commit and push) which used by GitHub Pages to render your blog posts.  This GitHub Action an be customized by modifying the [/.github/workflows/nb2post.yaml](/.github/workflows/nb2post.yaml) in your repo.  
 
-TODO: talk about yaml
+Some important notes about [nb2post.yaml](/.github/workflows/nb2post.yaml):
+
+```yaml
+...
+  push:
+    branches:
+      - master 
+    paths:
+      - '_notebooks/*.ipynb'
+```
+This  defines what will trigger the workflow, in this case, anytime files in the `/notebooks/` repository with file names matching `*.ipynb` are pushed to the `master` branch.
+
+
+``` yaml
+...
+    if: contains(join(github.event.commits.*.message), '/sync')
+```
+This is a a conditional statement added to the workflow that checks for the keyword `sync` in your commit messages.  You can remove or edit this statement to customize syncing behavior. You can read more about this syntax in [these help docs](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/contexts-and-expression-syntax-for-github-actions).
+
+## Additional Resources
+
+- [4 Part Series On Blogging With GitHub Pages](https://www.fast.ai/2020/01/20/blog_overview/): provides more context behind the benefits and motivations behind `fast_template`, as well as provides different modalities for blogging: markdown, Jupyter Notebooks, Word docs, etc.
+- [Blogging with Jupyter Notebooks](https://www.fast.ai/2020/01/20/nb2md/): part of the aforementioned 4-part series, and  includes instructions on how to blog with Jupyter Notebooks without using automation or GitHub Actions.
+- [Altair Tutorial](https://github.com/uwdata/visualization-curriculum): an excellent tutorial by [Jeffrey Heer](https://github.com/jheer) of the [Altair](https://altair-viz.github.io/) visualizaiton library, which includes the ability to create interactive data visualizations in Jupyter.  **Interactive visualizations created with Altair will remain interactive when converted to a blog post via the mechanisms described in this README!**
+- [The official Jekyll Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/): A gentle introduction to Jekyll, which will provide you with tools on how to customize your blog.
+- [Repository of Useful Jekyll Snippets](https://github.com/mdo/jekyll-snippets), by [mdo](https://github.com/mdo): a useful cookbook for accomplishing common tasks when creating a blog with Jekyll.
+- [Primer Components](https://primer.style/css/components): `fast_template` comes preloaded with this CSS library, which allows you to easily insert components such as [buttons](https://primer.style/css/components/buttons), [timelines](https://primer.style/css/components/timeline) and more with HTML into your blog posts.  This is optional and for andvanced users who want to add custom elements to their site.  _Note: [alerts](https://primer.style/css/components/alerts) are are provided natively in `fast_template` through markdown shortcuts and are [defined here](https://nbdev.fast.ai/export2html/#add_jekyll_notes)_.
