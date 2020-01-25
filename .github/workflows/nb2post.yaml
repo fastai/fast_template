@@ -1,0 +1,42 @@
+name: Notebook to Blog Post
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '_notebooks/*.ipynb'
+
+jobs:
+  convert-notebook:
+    if: contains(join(github.event.commits.*.message), '/sync')
+    runs-on: ubuntu-latest
+    steps:
+    - name: Copy Repository Contents
+      uses: actions/checkout@master
+
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.6'
+        architecture: 'x64'
+    
+      # These are the minimal steps I could come up with install nbdev in the actions runner
+      # perhaps this can be simplified?  (I just kept doing what it asked for)
+    - name: Run notebook converter
+      run: |
+        chmod -R 777 _posts/
+        pip install --upgrade pip
+        pip install jupyter_client ipykernel
+        python3 -m ipykernel install --user
+        git clone https://github.com/fastai/nbdev.git
+        pip install -e nbdev
+        cp nbdev/settings.ini .
+        python _action_files/nb2post.py
+      
+    - name: commit & push files
+      run: |
+        git config --global user.name $GITHUB_ACTOR
+        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git pull github ${GITHUB_REF} --ff-only
+        git add _posts
+        git commit -m "Update Jupyter Blog Posts" --allow-empty
+        git push github HEAD:${GITHUB_REF}
