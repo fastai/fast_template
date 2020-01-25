@@ -1,4 +1,4 @@
-# Automatically Convert Jupyter Notebooks To Blog Posts
+# Auto-convert Jupyter Notebooks To Posts
 
 [`fast_template`](https://www.fast.ai/2020/01/16/fast_template/) will **automatically convert [Jupyter](https://jupyter.org/) Notebooks saved into this directory as blog posts!**.  In addition to automatic conversion, there are some additional benefits that `fast_template` provides:
 
