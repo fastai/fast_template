@@ -82,4 +82,4 @@ This is a conditional statement added to the workflow that checks for the keywor
 
 ### Acknowledgements
 
-Notebook conversion for `fast_template` was contributed by @hamelsmu - thanks Hamel!
+Notebook conversion for `fast_template` was contributed by [@hamelsmu](https://github.com/hamelsmu) - thanks Hamel!
