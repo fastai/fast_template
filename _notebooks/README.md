@@ -79,3 +79,7 @@ This is a conditional statement added to the workflow that checks for the keywor
 - [The official Jekyll Tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/): A gentle introduction to Jekyll, which will provide you with tools on how to customize your blog.
 - [Repository of Useful Jekyll Snippets](https://github.com/mdo/jekyll-snippets), by [mdo](https://github.com/mdo): a useful cookbook for accomplishing common tasks when creating a blog with Jekyll.
 - [Primer Components](https://primer.style/css/components): `fast_template` comes preloaded with this CSS library, which allows you to easily insert components such as [buttons](https://primer.style/css/components/buttons), [timelines](https://primer.style/css/components/timeline) and more with HTML into your blog posts.  This is optional and for advanced users who want to add custom elements to their site.  _Note: [alerts](https://primer.style/css/components/alerts) are are provided natively in `fast_template` through markdown shortcuts that are [documented here](https://nbdev.fast.ai/export2html/#add_jekyll_notes)_.
+
+### Acknowledgements
+
+Notebook conversion for `fast_template` was contributed by @hamelsmu - thanks Hamel!
