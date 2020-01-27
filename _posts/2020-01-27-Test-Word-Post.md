@@ -1,4 +1,4 @@
-**Title:** Reducing Maintainer Toil on Kubeflow With GitHub Actions and Machine Learning TEST
+**Title:** Reducing Maintainer Toil on Kubeflow With GitHub Actions and Machine Learning
 
 By: [<span class="underline">Jeremy Lewi</span>](https://twitter.com/jeremylewi) & [<span class="underline">Hamel Husain</span>](https://twitter.com/HamelHusain)
 
