@@ -22,4 +22,9 @@ for FILENAME in ${GITHUB_WORKSPACE}/_word/*.docx; do
     cd ${GITHUB_WORKSPACE}
     pandoc --from docx --to gfm --output "${GITHUB_WORKSPACE}/_posts/${NEW_NAME}" --columns 9999 \
     --extract-media="assets/img/${BASE_NEW_NAME}" --standalone "${FILENAME}"
+
+    # Inject correction to image links in markdown
+    sed -i.bak 's/!\[\](assets/!\[\]({{site.url}}\/assets/g' "_posts/${NEW_NAME}"
+    # Remove intermediate files
+    rm _posts/*.bak
 done
