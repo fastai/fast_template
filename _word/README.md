@@ -9,7 +9,13 @@ _Note: You can convert Google Docs to Word Docs by navigating to the File Menu, 
 
 ## Setup
 
-Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), which walks you through setting up [`fast_template`](https://github.com/fastai/fast_template) on GitHub.
+- Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), which walks you through setting up [`fast_template`](https://github.com/fastai/fast_template) on GitHub.
+
+- If your website is not root, because you have elected to host your site as a [project site](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites) or you are using a custom domain, specify your site's `url` in [_config.yml](/_config.yml):
+
+    ```yaml
+    url: http://username.github.io/blog
+    ```
 
 ## Usage
 

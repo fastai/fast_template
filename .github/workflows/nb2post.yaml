@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   - '_notebooks/*.ipynb'
+    paths:
+      - '_notebooks/*.ipynb'
 
 jobs:
   convert-notebook:
