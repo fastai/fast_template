@@ -1,13 +1,14 @@
 from datetime import datetime
 import re, os
 from pathlib import Path
+from typing import Tuple, Set
 
 # Check for YYYY-MM-DD
 _re_blog_date = re.compile(r'([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])-)')
 # Check for leading dashses or numbers
 _re_numdash = re.compile(r'(^[-\d]+)')
 
-def rename_for_jekyll(nb_path: Path, warnings: set=None) -> str:
+def rename_for_jekyll(nb_path: Path, warnings: Set[Tuple[str, str]]=None) -> str:
     """
     Return a Path's filename string appended with its modified time in YYYY-MM-DD format.
     """

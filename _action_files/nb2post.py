@@ -13,10 +13,9 @@ def _nb2htmlfname(nb_path, dest=None):
     if dest is None: dest = Config().doc_path
     return Path(dest)/fname
 
+# TODO: Open a GitHub Issue in addition to printing warnings
 for original, new in warnings:
     print(f'{original} has been renamed to {new} to be complaint with Jekyll naming conventions.\n')
-
-# TODO: Open a GitHub Issue When there are any warnings
     
 ## apply monkey patch
 export2html._nb2htmlfname = _nb2htmlfname
