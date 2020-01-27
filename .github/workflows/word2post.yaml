@@ -3,12 +3,11 @@ on:
   push:
     branches:
       - master
-    # paths:
-    #   - '_word/*.docx'
+    paths:
+      - '_word/*.docx'
 
 jobs:
   convert-docx:
-    if: contains(join(github.event.commits.*.message), '/sync')
     runs-on: ubuntu-latest
     steps:
     - name: Copy Repository Contents
