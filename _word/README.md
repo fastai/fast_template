@@ -1,6 +1,6 @@
 # Automatically Convert MS Word (*.docx) Documents To Blog Posts
 
-_Note: You can convert Google Docs to Word Docs by navigating to the File Menu, and selecting Download > Microsoft Word (.docx)_
+_Note: You can convert Google Docs to Word Docs by navigating to the File menu, and selecting Download > Microsoft Word (.docx)_
 
 [`fast_template`](https://www.fast.ai/2020/01/16/fast_template/) will **automatically convert Word Documents (.docx) saved into this directory as blog posts!**.  The following steps are automated:
 
@@ -11,10 +11,11 @@ _Note: You can convert Google Docs to Word Docs by navigating to the File Menu, 
 
 - Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), which walks you through setting up [`fast_template`](https://github.com/fastai/fast_template) on GitHub.
 
-- If your website is not root, because you have elected to host your site as a [project site](https://help.github.com/en/github/working-with-github-pages/about-github-pages#types-of-github-pages-sites) or you are using a custom domain, specify your site's `url` in [_config.yml](/_config.yml):
+- If you are using [a custom domain](https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site), specify your site's `url` and `baseurl` in [_config.yml](/_config.yml) as follows:
 
     ```yaml
-    url: http://username.github.io/blog
+    url: http://example.com #the base hostname & protocol for your site, e.g. http://example.com
+    baseurl: /blog # the subpath of your site, e.g. /blog
     ```
 
 ## Usage
@@ -31,7 +32,7 @@ _Note: You can convert Google Docs to Word Docs by navigating to the File Menu, 
 
     - If you fail to name your file correctly, `fast_template` will automatically attempt to fix the problem by prepending the last modified date of your notebook to your generated blog post in `/_posts`, however, it is recommended that you name your files properly yourself for more transparency.
 
-4. Syncronize your files with GitHub by [following the instructions in this blog post](https://www.fast.ai/2020/01/18/gitblog/).
+4. Synchronize your files with GitHub by [following the instructions in this blog post](https://www.fast.ai/2020/01/18/gitblog/).
 
 ## Caveats
 
@@ -39,5 +40,5 @@ _Note: You can convert Google Docs to Word Docs by navigating to the File Menu, 
 
 ## Additional Resources
 
-- [Syncing your blog with your PC, and using your word processor](https://www.fast.ai/2020/01/20/nb2md/): This blog post describes how you can perform these steps manually without automation, and is good background reading.
+- [Syncing your blog with your PC, and using your word processor](https://www.fast.ai/2020/01/20/nb2md/): This blog post describes how you can perform these steps manually without automation and is good background reading.
 - [4 Part Series On Blogging With GitHub Pages](https://www.fast.ai/2020/01/20/blog_overview/): provides more context of the benefits and motivations behind `fast_template`, as well as different modalities for blogging: markdown, Jupyter Notebooks, Word docs, etc.
