@@ -1,10 +1,10 @@
 name: Notebook to Blog Post
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - '_notebooks/*.ipynb'
+on: 'push'
+  # push:
+  #   branches:
+  #     - master
+  #   paths:
+  #     - '_notebooks/*.ipynb'
 
 jobs:
   convert-notebook:
@@ -31,12 +31,13 @@ jobs:
         pip install -e nbdev
         cp nbdev/settings.ini .
         python _action_files/nb2post.py
+        ls _posts
       
-    - name: commit & push files
-      run: |
-        git config --global user.name $GITHUB_ACTOR
-        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
-        git pull github ${GITHUB_REF} --ff-only
-        git add _posts
-        git commit -m "Update Jupyter Blog Posts" --allow-empty
-        git push github HEAD:${GITHUB_REF}
+    # - name: commit & push files
+    #   run: |
+    #     git config --global user.name $GITHUB_ACTOR
+    #     git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+    #     git pull github ${GITHUB_REF} --ff-only
+    #     git add _posts
+    #     git commit -m "Update Jupyter Blog Posts" --allow-empty
+    #     git push github HEAD:${GITHUB_REF}
