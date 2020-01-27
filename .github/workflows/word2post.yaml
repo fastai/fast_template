@@ -20,7 +20,10 @@ jobs:
         architecture: 'x64'
 
     - name: install pandoc
-      run: sudo apt-get update && sudo apt-get install pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install pandoc
+        pandoc --version
 
     - name: run pandoc
       run : |
