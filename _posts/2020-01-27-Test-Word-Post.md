@@ -6,13 +6,13 @@ Maintaining a healthy open source project can entail a huge amount of toil. Popu
 
 Consider this graphic prepared by the NumFOCUS foundation showing the number of maintainers for three widely used scientific computing projects:
 
-![](assets/img/2020-01-27-Test-Word-Post/media/image1.png)
+![](/assets/img/2020-01-27-Test-Word-Post/media/image1.png)
 
 We can see that across these three projects, there is a very low ratio maintainers to users. Fixing this problem is not an easy task and likely requires innovative solutions to address the economics as well as tools.
 
 Due to its recent momentum and popularity, Kubeflow suffers from a similar fate as illustrated by the growth of new issues opened:
 
-![](assets/img/2020-01-27-Test-Word-Post/media/image2.png)
+![](/assets/img/2020-01-27-Test-Word-Post/media/image2.png)
 
 Source: “[<span class="underline">TensorFlow World 2019, Automating Your Developer Workflow With ML</span>](http://bit.ly/tf-github)”
 
