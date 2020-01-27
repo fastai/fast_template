@@ -1,4 +1,4 @@
-**Title:** Reducing Maintainer Toil on Kubeflow With GitHub Actions and Machine Learning **One**
+**Title:** Reducing Maintainer Toil on Kubeflow With GitHub Actions and Machine Learning \*\***Test One\*\***
 
 By: [<span class="underline">Jeremy Lewi</span>](https://twitter.com/jeremylewi) & [<span class="underline">Hamel Husain</span>](https://twitter.com/HamelHusain)
 
@@ -12,7 +12,7 @@ We can see that across these three projects, there is a very low ratio maintaine
 
 Due to its recent momentum and popularity, Kubeflow suffers from a similar fate as illustrated by the growth of new issues opened:
 
-![](../assets/img/2020-01-27-Test-Word-Post/media/image2.png)
+![]({{site.url}}/assets/img/2020-01-27-Test-Word-Post/media/image2.png)
 
 Source: “[<span class="underline">TensorFlow World 2019, Automating Your Developer Workflow With ML</span>](http://bit.ly/tf-github)”
 
