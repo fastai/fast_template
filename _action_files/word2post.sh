@@ -24,7 +24,7 @@ for FILENAME in ${GITHUB_WORKSPACE}/_word/*.docx; do
     --extract-media="assets/img/${BASE_NEW_NAME}" --standalone "${FILENAME}"
 
     # Inject correction to image links in markdown
-    sed -i.bak 's/!\[\](assets/!\[\]({{site.url}}\/assets/g' "${GITHUB_WORKSPACE}/_posts/${NEW_NAME}"
+    sed -i.bak 's/!\[\](assets/!\[\]({{site.url}}\/assets/g' "_posts/${NEW_NAME}"
     # Remove intermediate files
-    rm "${GITHUB_WORKSPACE}/_posts/*.bak"
+    rm _posts/*.bak
 done
