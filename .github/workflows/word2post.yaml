@@ -7,7 +7,7 @@ on:
     #   - '_word/*.docx'
 
 jobs:
-  convert-notebook:
+  convert-docx:
     if: contains(join(github.event.commits.*.message), '/sync')
     runs-on: ubuntu-latest
     steps:
