@@ -9,7 +9,6 @@ fi
 # Loops through directory of *.docx files and converts to markdown
 # markdown files are saved in _posts, media assets are saved in assets/img/<filename>/media
 for FILENAME in ${GITHUB_WORKSPACE}/_word/*.docx; do
-    
     NAME=${FILENAME##*/} # Get filename without the directory
     NEW_NAME=`python3 "${GITHUB_WORKSPACE}/_action_files/word2post.py" "${FILENAME}"` # clean filename to be Jekyll compliant for posts
     BASE_NEW_NAME=${NEW_NAME%.md}  # Strip the file extension
@@ -20,7 +19,7 @@ for FILENAME in ${GITHUB_WORKSPACE}/_word/*.docx; do
     fi
     
     echo "Converting: ${NAME}  ---to--- ${NEW_NAME}"
-
+    cd ${GITHUB_WORKSPACE}
     pandoc --from docx --to gfm --output "${GITHUB_WORKSPACE}/_posts/${NEW_NAME}" --columns 9999 \
-    --extract-media="${GITHUB_WORKSPACE}/assets/img/${BASE_NEW_NAME}" --standalone "${FILENAME}"
+    --extract-media="assets/img/${BASE_NEW_NAME}" --standalone "${FILENAME}"
 done
