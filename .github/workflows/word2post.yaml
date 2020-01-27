@@ -15,7 +15,9 @@ jobs:
       uses: actions/checkout@master
     
     - uses: docker://pandoc/core
-    
+      run: |
+        echo "hello"
+
     - name: install python3
       run : |
         echo "**** install Python ****" && \
