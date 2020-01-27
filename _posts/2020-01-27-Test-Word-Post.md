@@ -6,7 +6,7 @@ Maintaining a healthy open source project can entail a huge amount of toil. Popu
 
 Consider this graphic prepared by the NumFOCUS foundation showing the number of maintainers for three widely used scientific computing projects:
 
-![](/assets/img/2020-01-27-Test-Word-Post/media/image1.png)
+![](..assets/img/2020-01-27-Test-Word-Post/media/image1.png)
 
 We can see that across these three projects, there is a very low ratio maintainers to users. Fixing this problem is not an easy task and likely requires innovative solutions to address the economics as well as tools.
 
