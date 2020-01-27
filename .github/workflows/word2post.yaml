@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - '_word/*.docx'
+    # paths:
+    #   - '_word/*.docx'
 
 jobs:
   convert-notebook:
