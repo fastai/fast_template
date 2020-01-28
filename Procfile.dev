@@ -1,0 +1,2 @@
+jekyll: bundle exec jekyll serve
+jupyter: jupyter notebook _notebooks
