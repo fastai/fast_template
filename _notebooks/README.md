@@ -24,6 +24,7 @@ Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), whic
     # Title
     > Awesome summary
     - toc: False
+    - branch: master
     - metadata_key1: metadata_value1
     - metadata_key2: metadata_value2
     ```
@@ -31,6 +32,7 @@ Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), whic
     - Replace `Title`, with your desired title, and `Awesome summary` with your desired summary. 
     - `fast_template` will automatically generate a table of contents for you based on [markdown headers](https://guides.github.com/features/mastering-markdown/)!  You can toggle this feature on or off by setting `toc:` to either `True` or `False`.
     - **Additional metadata is optional** and allows you to set custom [front matter](https://jekyllrb.com/docs/front-matter/).
+    - `branch` field is used in `notebook_github_link` snippet to render a link back to your notebook in the post. It'll default to `master` if you don't specify it in the notebook.
 
 3. Save your notebook with the naming convention `YYYY-MM-DD-*.ipynb` into the `/_notebooks` folder of this repo.  For example `2020-01-28-My-First-Post.ipynb`.  This [naming convention is required by Jekyll](https://jekyllrb.com/docs/posts/) to render your blog post.
     - Be careful to name your file correctly!  It is easy to forget the last dash in `YYYY-MM-DD-`. Furthermore, the character immediately following the dash should only be an alphabetical letter.  Examples of valid filenames are:

@@ -20,4 +20,5 @@ for original, new in warnings:
 ## apply monkey patch
 export2html._nb2htmlfname = _nb2htmlfname
 
-export2html.notebook2html(fname='_notebooks/*.ipynb', dest='_posts/')
+export2html.notebook2html(fname='_notebooks/*.ipynb', dest='_posts/', template_file='_notebooks/template.tpl')
+

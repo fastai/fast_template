@@ -1,0 +1,4 @@
+<a class="btn btn-sm text-gray-dark" href="https://github.com/{{site.github_username}}/{{site.github_repo}}/tree/{{page.branch | default: "master" }}/{{page.nb_path}}" role="button">
+    {% octicon mark-github %}
+    View On GitHub
+</a>
