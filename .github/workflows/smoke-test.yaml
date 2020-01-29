@@ -1,0 +1,19 @@
+name: Smoke-Test
+on: [push]
+
+jobs:
+  jekyll-build-test-run:
+    runs-on: ubuntu-latest
+    container: jekyll/builder
+    steps:
+    - name: Copy Repository Contents
+      uses: actions/checkout@master
+
+    # We don't commit any files, just doing a dry run here
+    - name: Jekyll Build
+      run: |
+        chmod -R 777 .
+        bundle install
+        bundle exec jekyll build
+      env:
+        PAGES_REPO_NWO: ${{ github.repository }}
