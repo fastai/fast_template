@@ -1,0 +1,3 @@
+<a class="btn btn-sm text-gray-dark" href="https://colab.research.google.com/github/{{site.github_username}}/{{site.github_repo}}/blob/{{page.branch | default: "master"}}/{{page.nb_path}}" role="button">
+    Explore on Google Colab
+</a>
