@@ -1,11 +1,11 @@
-{%- extends 'hide.tpl' -%}{% block body %}---
-{% for key in resources %}
-    {%- if key not in ["metadata", "output_extension", "inlining", "raw_mimetypes", "global_content_filter"] -%}
-        {%- if resources[key] != "" -%}
-            {{ key }}: {{ resources[key] }}
-        {%- endif -%}
-    {% endif %}
-{% endfor %}
+{%- extends 'hide.tpl' -%}
+{%- block body -%}
+{%- set internals = ["metadata", "output_extension", "inlining", 
+                    "raw_mimetypes", "global_content_filter"] -%}
+---
+{%- for k in resources |reject("in", internals) %}
+{{ k }}: {{ resources[k] }}
+{%- endfor %}
 ---
 
 <!--
@@ -18,6 +18,6 @@
 -->
 
 <div class="container" id="notebook-container">
-    {{ super()  }}
+    {{ super() }}
 </div>
 {%- endblock body %}
