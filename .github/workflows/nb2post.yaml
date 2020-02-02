@@ -13,13 +13,14 @@ jobs:
     steps:
     - name: Copy Repository Contents
       uses: actions/checkout@master
+      with:
+        persist-credentials: false
 
     - uses: actions/setup-python@v1
       with:
         python-version: '3.6'
         architecture: 'x64'
     
-      # These are the minimal steps I could come up with install nbdev in the actions runner
     - name: Run notebook converter
       run: |
         chmod -R 777 _posts/
@@ -33,9 +34,12 @@ jobs:
 
     - name: commit & push files
       run: |
+        [ ! -z "$PERSONAL_ACCESS_TOKEN" ] || ( echo "You must set a PERSONAL_ACCESS_TOKEN in your repository secrets for automatic conversion to work!"; exit 1 )
         git config --global user.name $GITHUB_ACTOR
-        git remote add github "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        git remote add github "https://$GITHUB_ACTOR:$PERSONAL_ACCESS_TOKEN@github.com/$GITHUB_REPOSITORY.git"
         git pull github ${GITHUB_REF} --ff-only
         git add _posts
         git commit -m "Update Jupyter Blog Posts" --allow-empty
         git push github HEAD:${GITHUB_REF}
+      env:
+        PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

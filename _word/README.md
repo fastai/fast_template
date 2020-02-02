@@ -9,14 +9,18 @@ _Note: You can convert Google Docs to Word Docs by navigating to the File menu, 
 
 ## Setup
 
-- Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), which walks you through setting up [`fast_template`](https://github.com/fastai/fast_template) on GitHub.
+1. Follow [these instructions](https://www.fast.ai/2020/01/16/fast_template/), which walks you through setting up [`fast_template`](https://github.com/fastai/fast_template) on GitHub.
 
-- If you are using [a custom domain](https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site), specify your site's `url` and `baseurl` in [_config.yml](/_config.yml) as follows:
+2. If you are using [a custom domain](https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site), specify your site's `url` and `baseurl` in [_config.yml](/_config.yml) as follows:
 
     ```yaml
     url: http://example.com #the base hostname & protocol for your site, e.g. http://example.com
     baseurl: /blog # the subpath of your site, e.g. /blog
     ```
+
+3. Create a personal access token by following [these instructions](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line).  You can **ignore the section "Using a token on the command line".**
+
+4. Add your personal access token as an encrypted secret named `PERSONAL_ACCESS_TOKEN` to the repository you created with `fast_template`, by following the instructions in the section "Create encrypted secrets" of [this article](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets#creating-encrypted-secrets).  **It is important that you name your secret exactly as stated above.** You only need to follow the _Create encyrpted secrets_ section of the article, and can safely ignore everything else.
 
 ## Usage
 
