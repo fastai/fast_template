@@ -8,14 +8,14 @@
 
 title: Edit _config.yml to set your title!
 description: This is where the description of your site will go. You should change it by editing the _config.yml file. It can be as long as you like! Happy blogging... ❤
-github_username: jph00
+github_username: InfinitiZEr0
 
 # Email and twitter are optional:
-email:
+email:ang1492@gmail.com
 twitter_username:
 
 # Set this to true to get LaTeX math equation support
-use_math:
+use_math:True
 
 # Add your Google Analytics ID here if you have one and want to use it
 google_analytics:
